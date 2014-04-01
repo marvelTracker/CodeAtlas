@@ -43,8 +43,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Domain\Admin.cs" />
+    <Compile Include="Domain\BaseEntity.cs" />
+    <Compile Include="Domain\Consumer.cs" />
+    <Compile Include="Domain\EntityStatus.cs" />
+    <Compile Include="Domain\IEntity.cs" />
+    <Compile Include="Domain\Job.cs" />
+    <Compile Include="Domain\JobStatusType.cs" />
+    <Compile Include="Domain\Profile.cs" />
+    <Compile Include="Domain\QuotationStatusType.cs" />
+    <Compile Include="Domain\Quote.cs" />
+    <Compile Include="Domain\Review.cs" />
+    <Compile Include="Domain\Service.cs" />
+    <Compile Include="Domain\ServiceCharge.cs" />
+    <Compile Include="Domain\ServiceChargeType.cs" />
+    <Compile Include="Domain\ServiceProvider.cs" />
+    <Compile Include="Domain\ServiceProviderService.cs" />
+    <Compile Include="Domain\ServiceType.cs" />
+    <Compile Include="Domain\Suburb.cs" />
+    <Compile Include="Domain\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Domain\ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

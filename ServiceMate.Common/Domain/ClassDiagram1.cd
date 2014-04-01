@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Domain.ServiceProvider">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFAAAAAAAACAgAAAAAAAAAABAAIAAAABAAAAAAAAI=</HashCode>
+      <FileName>ServiceProvider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Suburb" />
+      <Property Name="Profile" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.Consumer">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Consumer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Profile" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.User">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAgAAAAAAAACAAAAAAABAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.Admin">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.ServiceCategory">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ServiceType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.Service">
+    <Position X="1.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServiceType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.ServiceCharge">
+    <Position X="8.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>ServiceCharge.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServiceChargeType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.Job">
+    <Position X="5.5" Y="7.75" Width="1.5" />
+    <AssociationLine Name="Consumer" Type="Domain.Consumer" ManuallyRouted="true">
+      <Path>
+        <Point X="6.25" Y="7.75" />
+        <Point X="6.25" Y="6.597" />
+        <Point X="7.448" Y="6.597" Type="JumpStart" />
+        <Point X="7.615" Y="6.597" Type="JumpEnd" />
+        <Point X="8.042" Y="6.597" Type="JumpStart" />
+        <Point X="8.208" Y="6.597" Type="JumpEnd" />
+        <Point X="9.417" Y="6.597" Type="JumpStart" />
+        <Point X="9.583" Y="6.597" Type="JumpEnd" />
+        <Point X="10" Y="6.597" />
+        <Point X="10" Y="4.434" />
+        <Point X="10.5" Y="4.434" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAggAAiAAAAAAAIAAAAAQAgAAAACEAAAAAA=</HashCode>
+      <FileName>Job.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Consumer" />
+      <Property Name="Service" />
+      <Property Name="Quotation" />
+      <Property Name="JobStatusType" />
+      <Property Name="Suburb" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.Quotation">
+    <Position X="7.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAgAAAA=</HashCode>
+      <FileName>Quote.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ServiceProvider" />
+      <Property Name="QuotationStatusType" />
+      <Property Name="Review" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.ServiceProviderService">
+    <Position X="6.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAQQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ServiceProviderService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Service" />
+      <Property Name="ServiceCharge" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.Review">
+    <Position X="4.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Review.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.Profile">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Profile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Domain.Suburb">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAhAAAAAA=</HashCode>
+      <FileName>Suburb.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Domain.IEntity">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAARAAAAA=</HashCode>
+      <FileName>IEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EntityStatus" />
+    </ShowAsAssociation>
+  </Interface>
+  <Enum Name="Domain.EntityStatusType">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAACAgAAAAAAAAAAA=</HashCode>
+      <FileName>EntityStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.ServiceChargeType">
+    <Position X="10.5" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ServiceChargeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.JobStatusType">
+    <Position X="2.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>JobStatusType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.QuotationStatusType">
+    <Position X="10" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAQAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>QuotationStatusType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
