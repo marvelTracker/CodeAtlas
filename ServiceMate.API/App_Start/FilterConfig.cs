@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace CarMate.App_Start
+namespace ServiceMate.API.App_Start
 {
     public class FilterConfig
     {

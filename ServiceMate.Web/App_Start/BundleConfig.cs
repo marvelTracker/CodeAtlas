@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace ServiceMate.Web
+namespace ServiceMate.Web.App_Start
 {
     public class BundleConfig
     {

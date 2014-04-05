@@ -7,8 +7,8 @@
     <ProjectGuid>{E566096A-CE9F-4775-A627-C82D534EB950}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarMate.Repository</RootNamespace>
-    <AssemblyName>CarMate.Repository</AssemblyName>
+    <RootNamespace>ServiceMate.Repository</RootNamespace>
+    <AssemblyName>ServiceMate.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -62,12 +62,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ServiceMate.Common\ServiceMate.Common.csproj">
-      <Project>{62251b05-e88a-4d6c-a406-18245be75ea0}</Project>
-      <Name>ServiceMate.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

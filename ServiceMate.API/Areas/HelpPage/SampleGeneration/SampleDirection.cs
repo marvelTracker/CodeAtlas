@@ -1,4 +1,4 @@
-namespace CarMate.Areas.HelpPage.SampleGeneration
+namespace ServiceMate.API.Areas.HelpPage.SampleGeneration
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

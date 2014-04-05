@@ -1,4 +1,4 @@
-﻿namespace CarMate.Common.Domain
+﻿namespace ServiceMate.Common.Domain
 {
     public class Quotation
     {

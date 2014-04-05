@@ -1,6 +1,6 @@
 using System.Web.Http;
 
-namespace CarMate.Areas.HelpPage.App_Start
+namespace ServiceMate.API.Areas.HelpPage.App_Start
 {
     /// <summary>
     /// Use this class to customize the Help Page.

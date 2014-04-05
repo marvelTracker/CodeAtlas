@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace CarMate.App_Start
+namespace ServiceMate.API.App_Start
 {
     public class BundleConfig
     {

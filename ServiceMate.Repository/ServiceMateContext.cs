@@ -1,32 +1,21 @@
-﻿using CarMate.Common.Domain;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 
-namespace CarMate.Repository
+
+
+namespace ServiceMate.Repository
 {
     public class ServiceMateContext : DbContext
     {
-        public ServiceMateContext()
-            : base("ServiceMateConnection")
-        {
-                
-        }
-        public DbSet<Consumer> Consumer { get; set; }
-        public DbSet<User> User { get; set; }
-        public DbSet<Profile> Profile { get; set; }
+       public ServiceMateContext()
+          : base("ServiceMateConnection")
+       {
+
+      }
+        //public DbSet<Consumer> Consumer { get; set; }
+        //public DbSet<User> User { get; set; }
+        //public DbSet<Profile> Profile { get; set; }
 
 
-        //public DbSet<Department> Departments { get; set; }
-        //public DbSet<Enrollment> Enrollments { get; set; }
-        //public DbSet<Instructor> Instructors { get; set; }
-        //public DbSet<Student> Students { get; set; }
-        //public DbSet<Person> People { get; set; }
-        //public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{

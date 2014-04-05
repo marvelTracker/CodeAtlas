@@ -7,8 +7,8 @@
     <ProjectGuid>{62251B05-E88A-4D6C-A406-18245BE75EA0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarMate.Common</RootNamespace>
-    <AssemblyName>CarMate.Common</AssemblyName>
+    <RootNamespace>ServiceMate.Common</RootNamespace>
+    <AssemblyName>ServiceMate.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

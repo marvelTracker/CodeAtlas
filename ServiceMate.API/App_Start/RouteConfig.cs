@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace CarMate.App_Start
+namespace ServiceMate.API.App_Start
 {
     public class RouteConfig
     {

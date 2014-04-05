@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace CarMate.Areas.HelpPage
+namespace ServiceMate.API.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

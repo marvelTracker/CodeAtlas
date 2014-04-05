@@ -1,8 +1,8 @@
 using System.Web.Http;
 using System.Web.Mvc;
-using CarMate.Areas.HelpPage.App_Start;
+using ServiceMate.API.Areas.HelpPage.App_Start;
 
-namespace CarMate.Areas.HelpPage
+namespace ServiceMate.API.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

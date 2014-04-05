@@ -1,18 +1,15 @@
-namespace CarMate.Repository.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CarMate.Repository.ServiceMateContext>
+namespace ServiceMate.Repository.Migrations
+{
+    internal sealed class Configuration : DbMigrationsConfiguration<ServiceMateContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(CarMate.Repository.ServiceMateContext context)
+        protected override void Seed(ServiceMateContext context)
         {
             //  This method will be called after migrating to the latest version.
 

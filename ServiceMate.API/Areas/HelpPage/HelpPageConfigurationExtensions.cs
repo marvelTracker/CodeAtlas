@@ -7,10 +7,10 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Description;
-using CarMate.Areas.HelpPage.Models;
-using CarMate.Areas.HelpPage.SampleGeneration;
+using ServiceMate.API.Areas.HelpPage.Models;
+using ServiceMate.API.Areas.HelpPage.SampleGeneration;
 
-namespace CarMate.Areas.HelpPage
+namespace ServiceMate.API.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {
