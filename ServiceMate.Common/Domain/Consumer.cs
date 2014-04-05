@@ -2,6 +2,7 @@
 {
     public class Consumer
     {
+        public int ID { get; set; }
         public User User
         {
             get

@@ -2,5 +2,6 @@
 {
     public class Profile
     {
+        public int ID { get; set; }
     }
 }

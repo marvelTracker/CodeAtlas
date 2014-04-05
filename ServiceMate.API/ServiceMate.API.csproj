@@ -297,6 +297,19 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceMate.Common\ServiceMate.Common.csproj">
+      <Project>{62251b05-e88a-4d6c-a406-18245be75ea0}</Project>
+      <Name>ServiceMate.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceMate.Repository\ServiceMate.Repository.csproj">
+      <Project>{e566096a-ce9f-4775-a627-c82d534eb950}</Project>
+      <Name>ServiceMate.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -11,7 +11,15 @@ namespace CarMate.Repository
 {
     public class ServiceMateContext : DbContext
     {
+        public ServiceMateContext()
+            : base("ServiceMateConnection")
+        {
+                
+        }
         public DbSet<Consumer> Consumer { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Profile> Profile { get; set; }
+
 
         //public DbSet<Department> Departments { get; set; }
         //public DbSet<Enrollment> Enrollments { get; set; }
