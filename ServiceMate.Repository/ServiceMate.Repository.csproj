@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="GenericRepository.cs" />
     <Compile Include="IGenericRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceMateContext.cs" />
   </ItemGroup>
