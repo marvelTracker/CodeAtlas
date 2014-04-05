@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarMate.Common.Domain;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -10,7 +11,8 @@ namespace CarMate.Repository
 {
     public class ServiceMateContext : DbContext
     {
-        //public DbSet<Course> Courses { get; set; }
+        public DbSet<Consumer> Consumer { get; set; }
+
         //public DbSet<Department> Departments { get; set; }
         //public DbSet<Enrollment> Enrollments { get; set; }
         //public DbSet<Instructor> Instructors { get; set; }
