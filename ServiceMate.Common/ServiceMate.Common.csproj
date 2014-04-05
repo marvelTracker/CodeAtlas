@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Admin.cs" />
-    <Compile Include="Domain\BaseEntity.cs" />
     <Compile Include="Domain\Consumer.cs" />
     <Compile Include="Domain\EntityStatus.cs" />
     <Compile Include="Domain\IEntity.cs" />
