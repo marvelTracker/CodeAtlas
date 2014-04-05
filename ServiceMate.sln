@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceMate.Repository", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceMate.Web", "ServiceMate.Web\ServiceMate.Web.csproj", "{39E9FFD2-52B2-470B-B512-C1B1AB32AEA0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScript", "SqlScript", "{AEB4918B-E6DA-4EC8-A75A-5B3A8F3F9241}"
+	ProjectSection(SolutionItems) = preProject
+		CreateLog4NetError_Table.sql = CreateLog4NetError_Table.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
