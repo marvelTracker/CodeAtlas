@@ -1,16 +1,8 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class Admin
+    public class Admin:BaseEntity
     {
-        public User User
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public virtual  User User { get; set; }
+        public int UserId { get; set; }
     }
 }

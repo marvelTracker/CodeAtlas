@@ -1,8 +1,11 @@
-﻿namespace ServiceMate.Common.Domain
+﻿using System;
+using System.Collections.Generic;
+
+namespace ServiceMate.Common.Domain
 {
-    public class Job
+    public class Job:BaseEntity
     {
-        public Consumer Consumer
+        public virtual Consumer Consumer
         {
             get
             {
@@ -13,7 +16,7 @@
             }
         }
 
-        public Service Service
+        public virtual Service Service
         {
             get
             {
@@ -24,7 +27,7 @@
             }
         }
 
-        public Quotation Quotation
+        public virtual Quotation Quotation
         {
             get
             {
@@ -35,7 +38,7 @@
             }
         }
 
-        public int JobDate
+        public DateTime JobDate
         {
             get
             {
@@ -46,7 +49,7 @@
             }
         }
 
-        public int ExpiredDate
+        public DateTime ExpiredDate
         {
             get
             {
@@ -68,7 +71,7 @@
             }
         }
 
-        public int Description
+        public string Description
         {
             get
             {
@@ -90,15 +93,6 @@
             }
         }
 
-        public int QuotationList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public IList<Quotation> QuotationList { get; set; }
     }
 }

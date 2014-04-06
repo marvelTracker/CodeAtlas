@@ -1,28 +1,11 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class Consumer
+    public class Consumer:BaseEntity
     {
-        public int ID { get; set; }
-        public User User
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public virtual User User { get; set; }
+        public int UserId { get; set; }
 
-        public Profile Profile
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public virtual Profile Profile { get; set; }
+        public int ProfileId { get; set; }
     }
 }

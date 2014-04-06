@@ -2,15 +2,6 @@
 {
     public class Service
     {
-        public ServiceCategory ServiceType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public ServiceCategory ServiceType { get; set; }
     }
 }

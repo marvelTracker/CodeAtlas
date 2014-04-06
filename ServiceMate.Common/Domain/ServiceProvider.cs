@@ -1,93 +1,27 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class ServiceProvider
+    public class ServiceProvider:BaseEntity
     {
-        public User User
+        public virtual User User { get; set; }
+        public int UserId { get; set; }
+
+        public string BusinessName
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
-        public int BusinessName
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string ABN { get; set; }
 
-        public int ABN
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int SuburbList { get; set; }
 
-        public int SuburbList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int Range { get; set; }
 
-        public int Range
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Suburb Suburb { get; set; }
 
-        public Suburb Suburb
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int ServiceProviderServiceList { get; set; }
 
-        public int ServiceProviderServiceList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Profile Profile
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public virtual Profile Profile { get; set; }
+        public int ProfileId { get; set; }
     }
 }

@@ -1,38 +1,13 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class Quotation
+    public class Quotation:BaseEntity
     {
-        public ServiceProvider ServiceProvider
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public virtual ServiceProvider ServiceProvider { get; set; }
+        public int ServiceProviderId { get; set; }
 
-        public QuotationStatusType QuotationStatusType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public QuotationStatusType QuotationStatusType { get; set; }
 
-        public Review Review
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public virtual Review Review { get; set; }
+        public int ReviewId { get; set; }
     }
 }

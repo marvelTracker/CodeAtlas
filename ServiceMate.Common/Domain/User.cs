@@ -1,50 +1,13 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class User
+    public class User:BaseEntity
     {
-       
-        public int UserId
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string Password { get; set; }
 
-        public int Password
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string Email { get; set; }
 
-        public int Email
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public string Token { get; set; }
 
-        public int Token
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public UserType UserType { get; set; }
     }
 }

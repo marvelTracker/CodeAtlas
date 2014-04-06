@@ -1,7 +1,7 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class Profile
+    public class Profile:BaseEntity
     {
-        public int ID { get; set; }
+        
     }
 }

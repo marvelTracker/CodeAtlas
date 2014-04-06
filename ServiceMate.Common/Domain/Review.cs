@@ -1,6 +1,6 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class Review
+    public class Review:BaseEntity
     {
     }
 }

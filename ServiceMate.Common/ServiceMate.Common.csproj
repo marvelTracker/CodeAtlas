@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="Domain\Admin.cs" />
     <Compile Include="Domain\Consumer.cs" />
     <Compile Include="Domain\EntityStatus.cs" />
@@ -61,9 +62,10 @@
     <Compile Include="Domain\ServiceChargeType.cs" />
     <Compile Include="Domain\ServiceProvider.cs" />
     <Compile Include="Domain\ServiceProviderService.cs" />
-    <Compile Include="Domain\ServiceType.cs" />
+    <Compile Include="Domain\ServiceCategory.cs" />
     <Compile Include="Domain\Suburb.cs" />
     <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\UserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,9 +75,7 @@
   <ItemGroup>
     <Content Include="Domain\Domain.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

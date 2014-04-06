@@ -1,27 +1,9 @@
 ﻿namespace ServiceMate.Common.Domain
 {
-    public class ServiceCharge
+    public class ServiceCharge:BaseEntity
     {
-        public ServiceChargeType ServiceChargeType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public ServiceChargeType ServiceChargeType { get; set; }
 
-        public int Price
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int Price { get; set; }
     }
 }
