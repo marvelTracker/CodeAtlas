@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-
+using ServiceMate.Common.Domain;
 
 
 namespace ServiceMate.Repository
@@ -11,9 +11,9 @@ namespace ServiceMate.Repository
        {
 
       }
-        //public DbSet<Consumer> Consumer { get; set; }
-        //public DbSet<User> User { get; set; }
-        //public DbSet<Profile> Profile { get; set; }
+       public DbSet<Consumer> Consumer { get; set; }
+       public DbSet<User> User { get; set; }
+       public DbSet<Profile> Profile { get; set; }
 
 
 
