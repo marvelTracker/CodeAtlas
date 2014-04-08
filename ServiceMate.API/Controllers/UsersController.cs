@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ServiceMate.API.Models;
 using ServiceMate.Common.Domain;
 using ServiceMate.Repository.Repository;
 
@@ -11,27 +12,19 @@ namespace ServiceMate.API.Controllers
 {
     public class UserController : ApiController
     {
-        private IUserRepository _userRepository { get; set; }
+        private ModelFactory _modelFactory;
+        private IUserRepository _userRepository;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserRepository userRepository, ModelFactory modelFactory)
         {
             _userRepository = userRepository;
+            _modelFactory = modelFactory;
         }
 
         // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<UserModel> Get()
         {
-            var test = _userRepository.GetAll();
-
-            User user = new User();
-            user.Email = "Dean.c.TESTE@gmail.com";
-            user.Password = "XXXX";
-            user.UserType = UserType.Consumer;
-
-            _userRepository.InsertAsync(user);
-           
-
-            return new string[] { "value1", "value2" };
+            return  _modelFactory.GetUserModels(_userRepository.GetAll().ToList());
         }
     }
 }

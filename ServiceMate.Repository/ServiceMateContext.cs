@@ -14,8 +14,8 @@ namespace ServiceMate.Repository
        public DbSet<Consumer> Consumer { get; set; }
        public DbSet<User> User { get; set; }
        public DbSet<Profile> Profile { get; set; }
-
-
+       public DbSet<ServiceProvider> ServiceProvider { get; set; }
+       
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{

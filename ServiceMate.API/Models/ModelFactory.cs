@@ -12,5 +12,17 @@ namespace ServiceMate.API.Models
         {
             return new UserModel() {UserId = user.Id, EmailId = user.Email, UserType = user.UserType};
         }
+
+        public IEnumerable<UserModel> GetUserModels(IList<User> users)
+        {
+            IList<UserModel> userModels = new List<UserModel>();
+
+            foreach (var user in users.ToList())
+            {
+                userModels.Add(GetUserModel(user));
+            }
+
+            return userModels;
+        }
     }
 }

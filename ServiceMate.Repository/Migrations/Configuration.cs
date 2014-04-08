@@ -27,10 +27,30 @@ namespace ServiceMate.Repository.Migrations
             user3.Password = "XXXX";
             user3.UserType = UserType.Consumer;
 
+            User user4 = new User();
+            user4.Email = "Cleaner.PAp@iclean.com";
+            user4.Password = "MIX";
+            user4.UserType = UserType.ServiceProvider;
+
             context.User.Add(user1);
             context.User.Add(user2);
             context.User.Add(user3);
+            context.User.Add(user4);
 
+            Consumer consumer = new Consumer();
+            consumer.User = user3;
+            consumer.PhoneNumber = "67777777";
+            consumer.ConsumerName = "BOB Malli";
+            
+            context.Consumer.Add(consumer);
+
+            ServiceProvider serviceProvider = new ServiceProvider();
+            serviceProvider.ABN = "12345634643";
+            serviceProvider.User = user4;
+            serviceProvider.BusinessName = "Reality Cleaners Australia";
+
+            context.ServiceProvider.Add(serviceProvider);
+            
             context.SaveChanges();
         }
     }
