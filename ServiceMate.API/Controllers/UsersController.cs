@@ -4,8 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using ServiceMate.API.Models;
 using ServiceMate.Common.Domain;
+using ServiceMate.Models;
 using ServiceMate.Repository.Repository;
 
 namespace ServiceMate.API.Controllers

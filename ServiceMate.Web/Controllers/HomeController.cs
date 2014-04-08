@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using ServiceMate.Models;
 
 namespace ServiceMate.Web.Controllers
 {
@@ -10,11 +12,26 @@ namespace ServiceMate.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
+           
+            HttpClient client = new HttpClient();
 
-            return View();
+            UserModel[] model = null;
+            
+            var task = client.GetAsync("http://localhost:49220/api/User").ContinueWith(
+
+                (taskWithResponse) =>
+                    {
+                        var response = taskWithResponse.Result;
+                        var readTask = response.Content.ReadAsAsync<UserModel[]>();
+                        readTask.Wait();
+                        model = readTask.Result;
+                    });
+
+            task.Wait();
+
+            return View(model);
         }
-
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
@@ -29,4 +46,6 @@ namespace ServiceMate.Web.Controllers
             return View();
         }
     }
+
+   
 }
