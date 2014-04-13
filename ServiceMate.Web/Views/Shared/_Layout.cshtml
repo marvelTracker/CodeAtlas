@@ -1,48 +1,213 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
-        </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
-            </div>
-        </footer>
+<html>
+<head>
+    <title>Service Mate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css/bootstrap.css");
+     
+    @Styles.Render("~/Content/css/main.css");
+      @Styles.Render("~/Content/css/daterange.css");
+       @Styles.Render("~/Content/fonts/font-awesome.css");
+      @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+        <!-- Top bar start -->
+        <div class="top-bar">
+
+            <div class="logo">
+                SM<sup><i class="icon-cloud"></i></sup>
+            </div>
+
+            <!-- Icon nav start -->
+            <ul id="icon-nav">
+                <li>
+                    <a href="#">
+                        <i class="icon-bell"></i>
+                        <span class="count-label"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-comment-alt"></i>
+                        <span class="count-label count-lb-yellow"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-envelope-alt"></i>
+                        <span class="count-label count-lb-green"></span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Icon nav end -->
+
+            <!-- Search bar start -->
+            <div class="custom-search hidden-xs">
+                <input type="text" class="search-query" placeholder="Search here">
+                <i class="icon-search"></i>
+            </div>
+            <!-- Search bar end -->
+
+        </div>
+        <!-- Top bar end -->
+
+        <!-- Header start -->
+        <header class="navbar" role="navigation">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">&nbsp;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="graphs.html">Graphs</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">UI elements <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="panels.html">Panels &amp; List Groups</a></li>
+                            <li><a href="notifications.html">Notifications</a></li>
+                            <li><a href="typography.html">Typography</a></li>
+                            <li class="divider"></li>
+                            <li><a href="grid.html">Grid</a></li>
+                            <li class="divider"></li>
+                            <li><a href="ui-elements.html">More UI Elements...</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="forms.html">Form Elements</a></li>
+                            <li><a href="wizards.html">Form Wizards</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tables.html">Tables</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bonus Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="invoice.html">Invoice</a></li>
+                            <li><a href="calendar.html">Calendar</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li class="divider"></li>
+                            <li><a href="error.html">404</a></li>
+                            <li><a href="blankpage.html">Blank Page</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Mini navigation start -->
+                <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>Sandy <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="calendar.html">My Calendar</a></li>
+                            <li><a href="#">My Inbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Mini navigation end -->
+            </nav>
+        </header>
+        <!-- Header end -->
+
+        <!-- Page title Start -->
+        <div class="page-title">
+
+            <div class="row ">
+
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h2>Dashboard</h2>
+                    <ul class="breadcrumb">
+                        <li>Home</li>
+                        <li>Dashboard</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-6">
+
+                    <!-- Mini Nav Right Start -->
+                    <ul id="page-settings">
+
+                        <li id="reportrange">
+                            <i class="icon-calendar"></i>
+                            <span></span><b class="caret"></b>
+                        </li>
+
+                        <li>
+                            <i class="icon-cog"></i>
+                        </li>
+                    </ul>
+                    <!-- Mini Nav Right End -->
+
+                    <!-- Stats Start -->
+                    <ul class="stats hidden-sm hidden-xs">
+                        <li>
+                            <span id="orders" class="graph"></span>
+                            <div class="details">
+                                <span class="big">2,591</span>
+                                <span class="small">Orders</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span id="currentBalance" class="graph"></span>
+                            <div class="details">
+                                <span class="big">$7,345</span>
+                                <span class="small">Balance</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Stats End -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Page title end -->
+
+        <!-- Row start -->
+        <div class="row">
+
+            <div class="col-md-12 col-sm-6 col-sx-6">
+                <div class="panel panel-default">
+                    @RenderBody()
+                </div>
+            </div>
+
+        </div>
+        <!-- Row end -->
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Content/js/bootstrap.min.js")
+     @Scripts.Render("~/Content/js/flot/custom/combine-chart.js")
+     @Scripts.Render("~/Content/js/tiny-scrollbar.js")
+     @Scripts.Render("~/Content/js/daterange/moment.js")
+     @Scripts.Render("~/Content/js/daterange/daterangepicker.js")
+     @Scripts.Render("~/Content/js/custom.js")
+     @Scripts.Render("~/Content/js/custom-index.js")
+    
+     @RenderSection("scripts", required: false)
+</body>
 </html>

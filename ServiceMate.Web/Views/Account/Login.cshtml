@@ -1,50 +1,54 @@
-﻿@model ServiceMate.Web.Models.LoginModel
-
+﻿<!DOCTYPE html>
 @{
-    ViewBag.Title = "Log in";
+    Layout = null;
 }
+<html>
+  <head>
+    <title>Service Mate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     @Styles.Render("~/Content/css/bootstrap.css");
+     
+      @Styles.Render("~/Content/css/main.css");
+      @Styles.Render("~/Content/css/login.css");
+     
+       @Styles.Render("~/Content/fonts/font-awesome.css");
+      @Scripts.Render("~/bundles/modernizr")
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="fonts/font-awesome.css">
+    <![endif]-->
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-</hgroup>
+    <!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
 
-<section id="loginForm">
-<h2>Use a local account to log in.</h2>
-@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+  </head>
 
-    <fieldset>
-        <legend>Log in Form</legend>
-        <ol>
-            <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
-                @Html.ValidationMessageFor(m => m.UserName)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-                @Html.ValidationMessageFor(m => m.Password)
-            </li>
-            <li>
-                @Html.CheckBoxFor(m => m.RememberMe)
-                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
-            </li>
-        </ol>
-        <input type="submit" value="Log in" />
-    </fieldset>
-    <p>
-        @Html.ActionLink("Register", "Register") if you don't have an account.
-    </p>
-}
-</section>
-
-<section class="social" id="socialLoginForm">
-    <h2>Use another service to log in.</h2>
-    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
-</section>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+  <body>
+    <div id="login-container">
+      <div id="logo">
+        <sup><i class="icon-cloud"></i></sup>
+      </div>
+      <div id="login">
+        <h3>Welcome to <span>Service Mate</span>.</h3>
+        <h5>Please sign in to get access.</h5>
+        <form id="login-form" action="./index.html" class="form">
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" class="form-control" id="login-username" placeholder="User Name">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" class="form-control" id="login-password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <button type="submit" id="login-btn" class="btn btn-success btn-block">Signin</button>
+          </div>
+        </form>
+        <a href="index.html" class="btn btn-default">Forgot Password?</a>
+      </div>
+    </div>
+  </body>
+</html>
