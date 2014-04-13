@@ -1,3 +1,5 @@
+using ServiceMate.Common.Domain;
+
 namespace ServiceMate.Repository.Migrations
 {
     using System;
@@ -14,18 +16,27 @@ namespace ServiceMate.Repository.Migrations
 
         protected override void Seed(ServiceMate.Repository.ServiceMateContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            User user1 = new User();
+            user1.Email = "Dinesh.Ranasinghe@gmail.com";
+            user1.Password = "XXXX";
+            user1.UserType = UserType.Admin;
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            User user2 = new User();
+            user2.Email = "Kumara@gmail.com";
+            user2.Password = "TEST";
+            user2.UserType = UserType.Admin;
+
+            User user3 = new User();
+            user3.Email = "BOB.John@gmail.com";
+            user3.Password = "XXXX";
+            user3.UserType = UserType.Consumer;
+
+            context.User.Add(user1);
+            context.User.Add(user2);
+            context.User.Add(user3);
+
+            context.SaveChanges();
+
         }
     }
 }
