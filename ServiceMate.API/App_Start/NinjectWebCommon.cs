@@ -1,4 +1,6 @@
+using System.Data.Entity;
 using System.Web.Http;
+using ServiceMate.Common.Domain;
 using ServiceMate.Repository;
 using WebApiContrib.IoC.Ninject;
 
@@ -69,7 +71,7 @@ namespace ServiceMate.API.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind(typeof(IGenericRepository<>)).To(typeof(GenericRepository<>));
-            kernel.Bind<ServiceMateContext>().To<ServiceMateContext>();
+            kernel.Bind<DbContext>().To<ServiceMateContext>();
         }        
     }
 }
