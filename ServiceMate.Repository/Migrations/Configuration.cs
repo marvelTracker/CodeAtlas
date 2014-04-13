@@ -1,57 +1,31 @@
-using System.Data.Entity.Migrations;
-using ServiceMate.Common.Domain;
-
 namespace ServiceMate.Repository.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<ServiceMateContext>
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<ServiceMate.Repository.ServiceMateContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(ServiceMateContext context)
+        protected override void Seed(ServiceMate.Repository.ServiceMateContext context)
         {
-            User user1 = new User();
-            user1.Email = "Dinesh.Ranasinghe@gmail.com";
-            user1.Password = "XXXX";
-            user1.UserType = UserType.Admin;
+            //  This method will be called after migrating to the latest version.
 
-            User user2 = new User();
-            user2.Email = "Kumara@gmail.com";
-            user2.Password = "TEST";
-            user2.UserType = UserType.Admin;
-
-            User user3 = new User();
-            user3.Email = "BOB.John@gmail.com";
-            user3.Password = "XXXX";
-            user3.UserType = UserType.Consumer;
-
-            User user4 = new User();
-            user4.Email = "Cleaner.PAp@iclean.com";
-            user4.Password = "MIX";
-            user4.UserType = UserType.ServiceProvider;
-
-            context.User.Add(user1);
-            context.User.Add(user2);
-            context.User.Add(user3);
-            context.User.Add(user4);
-
-            Consumer consumer = new Consumer();
-            consumer.User = user3;
-            consumer.PhoneNumber = "67777777";
-            consumer.ConsumerName = "BOB Malli";
-            
-            context.Consumer.Add(consumer);
-
-            ServiceProvider serviceProvider = new ServiceProvider();
-            serviceProvider.ABN = "12345634643";
-            serviceProvider.User = user4;
-            serviceProvider.BusinessName = "Reality Cleaners Australia";
-
-            context.ServiceProvider.Add(serviceProvider);
-            
-            context.SaveChanges();
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
         }
     }
 }
