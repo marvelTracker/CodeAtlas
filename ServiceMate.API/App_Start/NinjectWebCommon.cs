@@ -1,6 +1,5 @@
 using System.Web.Http;
 using ServiceMate.Repository;
-using ServiceMate.Repository.Repository;
 using WebApiContrib.IoC.Ninject;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ServiceMate.API.App_Start.NinjectWebCommon), "Start")]
@@ -69,7 +68,7 @@ namespace ServiceMate.API.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IUserRepository>().To<UserRepository>();
+            kernel.Bind(typeof(IGenericRepository<>)).To(typeof(GenericRepository<>));
             kernel.Bind<ServiceMateContext>().To<ServiceMateContext>();
         }        
     }

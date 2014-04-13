@@ -6,16 +6,16 @@ using System.Net.Http;
 using System.Web.Http;
 using ServiceMate.Common.Domain;
 using ServiceMate.Models;
-using ServiceMate.Repository.Repository;
+using ServiceMate.Repository;
 
 namespace ServiceMate.API.Controllers
 {
     public class UserController : ApiController
     {
         private ModelFactory _modelFactory;
-        private IUserRepository _userRepository;
+        private IGenericRepository<User> _userRepository;
 
-        public UserController(IUserRepository userRepository, ModelFactory modelFactory)
+        public UserController(IGenericRepository<User> userRepository, ModelFactory modelFactory)
         {
             _userRepository = userRepository;
             _modelFactory = modelFactory;
