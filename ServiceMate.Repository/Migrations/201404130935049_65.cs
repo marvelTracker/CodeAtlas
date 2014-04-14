@@ -3,7 +3,7 @@ namespace ServiceMate.Repository.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initialDbGeneration : DbMigration
+    public partial class _65 : DbMigration
     {
         public override void Up()
         {

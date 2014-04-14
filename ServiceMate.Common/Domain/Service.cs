@@ -2,6 +2,8 @@
 {
     public class Service
     {
-        public ServiceCategory ServiceType { get; set; }
+        public int Id { get; set; }
+        public ServiceCategory ServiceCategory { get; set; }
+        public string Name { get; set; }
     }
 }

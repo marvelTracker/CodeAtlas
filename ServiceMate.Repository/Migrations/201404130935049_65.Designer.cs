@@ -7,13 +7,13 @@ namespace ServiceMate.Repository.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class initialDbGeneration : IMigrationMetadata
+    public sealed partial class _65 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initialDbGeneration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_65));
         
         string IMigrationMetadata.Id
         {
-            get { return "201404130933328_initialDbGeneration"; }
+            get { return "201404130935049_65"; }
         }
         
         string IMigrationMetadata.Source
