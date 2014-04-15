@@ -37,8 +37,8 @@
             <sup><i class="icon-cloud"></i></sup>
         </div>
         <div id="login" ng-app="authenticationModule">
-            <h3>Welcome to <span>Service Mate</span>.</h3>
-            <h5>Please sign in to get access.</h5>
+            <h3>Welcome to <span>Service Mate</span></h3>
+            <h5>Please sign in to get access</h5>
             <form id="login-form" action="/Account/Login" method="post" class="form">
                 <div class="form-group">
                     <label for="UserName">Username</label>
@@ -49,21 +49,11 @@
                     <input type="password" class="form-control" id="Password" placeholder="Password">
                 </div>
                 <div class="form-group">
-
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="RememberMe">
-                            Remember me
-                        </label>
-
-                    </div>
+                    <button type="submit" id="login-btn" class="btn btn-success btn-block">Signin</button>
+                </div>
+            </form>
+            <a href="index.html" class="btn btn-default">Forgot Password?</a>
         </div>
-        <div class="form-group">
-            <button type="submit" id="login-btn" class="btn btn-success btn-block">Signin</button>
-        </div>
-        </form>
-        <a href="index.html" class="btn btn-default">Forgot Password?</a>
-    </div>
     </div>
 </body>
 </html>
