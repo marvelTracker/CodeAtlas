@@ -12,6 +12,7 @@ namespace ServiceMate.Repository.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(ServiceMate.Repository.ServiceMateContext context)
@@ -46,7 +47,7 @@ namespace ServiceMate.Repository.Migrations
             ServiceCategory serviceCategory9 = new ServiceCategory { Category = ServiceCategoryEnum.Cleaning, Description = "Hard Floor Cleaning", ServiceCategoryCode = 108 };
             ServiceCategory serviceCategory10 = new ServiceCategory { Category = ServiceCategoryEnum.Cleaning, Description = "Duct Cleaning", ServiceCategoryCode = 109 };
 
-
+            
 
             context.ServiceCategory.Add(serviceCategory1);
             context.ServiceCategory.Add(serviceCategory2);
@@ -57,7 +58,25 @@ namespace ServiceMate.Repository.Migrations
             context.ServiceCategory.Add(serviceCategory7);
             context.ServiceCategory.Add(serviceCategory8);
             context.ServiceCategory.Add(serviceCategory9);
-            context.ServiceCategory.Add(serviceCategory10);            
+            context.ServiceCategory.Add(serviceCategory10);
+
+            Service service1 = new Service { Name = "One-off Spring Clean", ServiceCategoryID = serviceCategory1.Id };
+            Service service2 = new Service { Name = " End of Lease Clean", ServiceCategoryID = serviceCategory1.Id };
+            Service service3 = new Service { Name = "Weekly Service", ServiceCategoryID = serviceCategory1.Id };
+            Service service4 = new Service { Name = "Fornightly Service", ServiceCategoryID = serviceCategory1.Id };
+            Service service5 = new Service { Name = "Monthly Service", ServiceCategoryID = serviceCategory1.Id };
+            Service service6 = new Service { Name = "Other Regular Service", ServiceCategoryID = serviceCategory1.Id };
+
+            
+
+            context.Service.Add(service1);
+            context.Service.Add(service2);
+            context.Service.Add(service3);
+            context.Service.Add(service4);
+            context.Service.Add(service5);
+            context.Service.Add(service6);
+            
+
             context.SaveChanges();
 
         }

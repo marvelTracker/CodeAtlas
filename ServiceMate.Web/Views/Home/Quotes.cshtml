@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Quotes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+ @Scripts.Render("~/Scripts/angular.min.js")
+ @Scripts.Render("~/App/Quote/quoteModule.js")
+ @Scripts.Render("~/App/Quote/quoteCtrl.js")
+ @Scripts.Render("~/App/Quote/quoteSvc.js")
+
+<h2>Compare Carpet Cleaning Quotes from $33 Per Hour</h2>
+<!-- Row start -->
+<div class="row">
+      
+    <div class="col-md-12 col-sm-6 col-xs-12">
+        <div class="panel panel-default" ng-app="quoteModule">
+         
+            <div class="panel-body" ng-controller="quoteCtrl">
+                <form class="form-horizontal row-border" action="#">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Where are you located?</label>
+                        <div class="col-md-8">
+                          <input type="text" name="location" ng-model="location" class="form-control">                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">What kind of service do you need?</label>
+                        <div class="col-md-8">
+                            <input type="text" name="Service" ng-model="Service" class="form-control">
+                        </div>
+
+                  @*          <div ng-controller="Ctrl">
+                         <label ng-repeat="service in Services">
+        <input type="checkbox" name="service.name" ng-model="service.code"></input>
+        {{service.name}}</label>
+                          </div>*@
+
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Please provide any further details of the job</label>
+                        <div class="col-md-8">
+                            <input type="text" name="moredetails" ng-model="moredetails" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">When will the job start?</label>
+                        <div class="col-md-8">
+                            <input type="text" name="startdate" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">You Name</label>
+                        <div class="col-md-8">
+                            <input type="text" name="name" ng-model="name" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone Number</label>
+                        <div class="col-md-8">
+                            <input type="tel" name="phone" ng-model="phone" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-8">
+                            <input type="email" name="email" ng-model="email" class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Password</label>
+                        <div class="col-md-8">
+                            <input type="password" name="password" ng-model="password" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Confirm Password</label>
+                        <div class="col-md-8">
+                            <input type="password" name="confirmPassword" ng-model="confirmPassword" class="form-control">
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row end -->

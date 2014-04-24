@@ -17,19 +17,19 @@ namespace ServiceMate.Web.Controllers
             HttpClient client = new HttpClient();
 
             UserModel[] model = null;
-            
+
             var task = client.GetAsync("http://localhost:49220/api/User").ContinueWith(
 
                 (taskWithResponse) =>
-                    {
-                        var response = taskWithResponse.Result;
-                        var readTask = response.Content.ReadAsAsync<UserModel[]>();
-                        readTask.Wait();
-                        model = readTask.Result;
-                    });
+                {
+                    var response = taskWithResponse.Result;
+                    var readTask = response.Content.ReadAsAsync<UserModel[]>();
+                    readTask.Wait();
+                    model = readTask.Result;
+                });
 
             task.Wait();
-
+           
             return View(model);
         }
         
@@ -44,6 +44,10 @@ namespace ServiceMate.Web.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult Quotes()
+        {
             return View();
         }
     }

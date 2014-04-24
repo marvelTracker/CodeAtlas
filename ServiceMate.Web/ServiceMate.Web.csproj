@@ -193,6 +193,9 @@
     <Content Include="App\Authentication\authenticationCtrl.js" />
     <Content Include="App\Authentication\authenticationModule.js" />
     <Content Include="App\Authentication\authenticationSvc.js" />
+    <Content Include="App\Quote\quoteCtrl.js" />
+    <Content Include="App\Quote\quoteModule.js" />
+    <Content Include="App\Quote\quoteSvc.js" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\daterange.css" />
     <Content Include="Content\css\easy-wizard\jquery.snippet.min.css" />
@@ -395,6 +398,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Quotes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\Consumer\" />
